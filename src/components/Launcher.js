@@ -57,6 +57,7 @@ class Launcher extends Component {
           agentProfile={this.props.agentProfile}
           isOpen={isOpen}
           onClose={this.handleClick.bind(this)}
+          showControls={this.props.showControls}
         />
       </div>
     );
@@ -77,6 +78,7 @@ Launcher.propTypes = {
   onMessageWasSent: PropTypes.func,
   newMessagesCount: PropTypes.number,
   isOpen: PropTypes.bool,
+  showControls: PropTypes.bool,
   handleClick: PropTypes.func,
   messageList: PropTypes.arrayOf(PropTypes.object)
 };

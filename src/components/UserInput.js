@@ -20,7 +20,7 @@ class UserInput extends Component {
   }
 
   componentDidMount() {
-    this.emojiPickerButton = document.querySelector('#sc-emoji-picker-button'); 
+    this.emojiPickerButton = document.querySelector('#sc-emoji-picker-button');
   }
 
   handleKeyDown(event) {
@@ -75,7 +75,7 @@ class UserInput extends Component {
 
   _handleEmojiPicked = (emoji) => {
     this.setState({ emojiPickerIsOpen: false });
-    if(this.state.inputHasText) {
+    if (this.state.inputHasText) {
       this.userInput.innerHTML += emoji;
     } else {
       this.props.onSubmit({
@@ -151,7 +151,7 @@ class UserInput extends Component {
               tooltip={this._renderEmojiPopup()}
             />
           </div>
-          {this._renderSendOrFileIcon()}
+          {this.props.showControls ? this._renderSendOrFileIcon() : null}
         </div>
       </form>
     );
@@ -159,6 +159,7 @@ class UserInput extends Component {
 }
 
 UserInput.propTypes = {
+  showControls: PropTypes.bool,
   onSubmit: PropTypes.func.isRequired,
   onFilesSelected: PropTypes.func.isRequired
 };

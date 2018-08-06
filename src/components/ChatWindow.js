@@ -37,6 +37,7 @@ class ChatWindow extends Component {
           <UserInput
             onSubmit={this.onUserInputSubmit.bind(this)}
             onFilesSelected={this.onFilesSelected.bind(this)}
+            showControls={this.props.showControls}
           />
         </div>
       );
