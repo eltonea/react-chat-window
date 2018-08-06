@@ -18,7 +18,8 @@ class Demo extends Component {
     this.state = {
       messageList: messageHistory,
       newMessagesCount: 0,
-      isOpen: false
+      isOpen: false,
+      showControls: true 
     };
   }
 
@@ -79,6 +80,7 @@ class Demo extends Component {
         newMessagesCount={this.state.newMessagesCount}
         handleClick={this._handleClick.bind(this)}
         isOpen={this.state.isOpen}
+        showControls={this.state.showControls}
       />
       <img className="demo-monster-img" src={monsterImgUrl} />
       <Footer />
