@@ -4,7 +4,7 @@ import FileIcon from './../icons/FileIcon'
 
 const FileMessage = (props) => {
     return (
-        <a className="sc-message--file" href={props.data.url} download={props.data.fileName}>
+        <a className="sc-message--file" href={props.data.url} target="_blank" download={props.data.fileName}>
             <FileIcon />
             <p>{props.data.fileName}</p>
         </a>
